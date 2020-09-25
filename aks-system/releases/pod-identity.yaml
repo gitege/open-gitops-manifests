@@ -11,3 +11,5 @@ spec:
     git: https://github.com/Azure/aad-pod-identity.git
     path: charts/aad-pod-identity
     ref: master
+  values:
+    installCRDs: true
