@@ -11,21 +11,21 @@ spec:
     git: https://github.com/Azure/aad-pod-identity.git
     path: charts/aad-pod-identity
     ref: master
-  values:
-    azureIdentities:
-    - name: "pod-identity"
-      type: 0
-      enabled: "true"
-      resourceID: 
-        valueFrom:
-          configMapKeyRef:
-            name: pod-identity-properties
-            key: ENV_AZURE_MSI_RESOURCE_ID
-      clientID:
-        valueFrom:
-          configMapKeyRef:
-            name: pod-identity-properties
-            key: ENV_AZURE_MSI_CLIENT_ID
-      binding:
-        name: "podidentitybinding"
-        selector: "podidentity"
+  # values:
+  #   azureIdentities:
+  #   - name: "pod-identity"
+  #     type: 0
+  #     enabled: "true"
+  #     resourceID: 
+  #       valueFrom:
+  #         configMapKeyRef:
+  #           name: pod-identity-properties
+  #           key: ENV_AZURE_MSI_RESOURCE_ID
+  #     clientID:
+  #       valueFrom:
+  #         configMapKeyRef:
+  #           name: pod-identity-properties
+  #           key: ENV_AZURE_MSI_CLIENT_ID
+  #     binding:
+  #       name: "podidentitybinding"
+  #       selector: "podidentity"
