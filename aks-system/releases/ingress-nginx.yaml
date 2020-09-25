@@ -1,0 +1,17 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: ingress-nginx
+  namespace: ingress-nginx
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  releaseName: ingress-nginx
+  chart:
+    git: https://github.com/kubernetes/ingress-nginx.git
+    path: charts/ingress-nginx
+    ref: master
+  values:
+    controller:
+      replicaCount: 2
