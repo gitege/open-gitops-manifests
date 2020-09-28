@@ -10,9 +10,9 @@ spec:
   helmVersion: v3
   releaseName: ingress-nginx
   chart:
-    git: https://github.com/kubernetes/ingress-nginx.git
-    path: charts/ingress-nginx
-    ref: master
+    repo: https://kubernetes.github.io/ingress-nginx
+    path: ingress-nginx
+    version: 3.3.0
   values:
     installCRDs: true
   valuesFrom:
