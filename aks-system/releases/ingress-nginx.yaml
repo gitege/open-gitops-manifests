@@ -13,3 +13,11 @@ spec:
     git: https://github.com/kubernetes/ingress-nginx.git
     path: charts/ingress-nginx
     ref: master
+  values:
+    installCRDs: true
+  valuesFrom:
+  - configMapKeyRef:
+      name: ingress-nginx-properties
+      namespace: ingress-nginx
+      key: values.yaml
+      optional: true
