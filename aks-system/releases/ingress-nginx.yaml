@@ -10,8 +10,6 @@ spec:
   helmVersion: v3
   releaseName: ingress-nginx
   chart:
-    repository: https://kubernetes.github.io/ingress-nginx
-    name: ingress-nginx
-  values:
-    controller:
-      replicaCount: 2
+    git: https://github.com/kubernetes/ingress-nginx.git
+    path: charts/ingress-nginx
+    ref: master
