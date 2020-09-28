@@ -14,3 +14,9 @@ spec:
     ref: master
   values:
     installCRDs: true
+  valuesFrom:
+  - configMapKeyRef:
+    name: pod-identity-properties
+    namespace: pod-identity
+    key: values.yaml
+    optional: false
