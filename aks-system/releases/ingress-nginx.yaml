@@ -13,8 +13,6 @@ spec:
     repo: https://kubernetes.github.io/ingress-nginx
     path: ingress-nginx
     version: 3.3.0
-  values:
-    installCRDs: true
   valuesFrom:
   - configMapKeyRef:
       name: ingress-nginx-properties
