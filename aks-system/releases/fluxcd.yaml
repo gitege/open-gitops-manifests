@@ -1,0 +1,21 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: fluxcd
+  namespace: fluxcd
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  helmVersion: v3
+  releaseName: fluxcd
+  chart:
+    repository: https://charts.fluxcd.io
+    chart: flux
+  values:
+  valuesFrom:
+  - configMapKeyRef:
+      name: fluxcd-properties
+      namespace: fluxcd
+      key: values.yaml
+      optional: false
