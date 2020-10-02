@@ -10,8 +10,9 @@ spec:
   helmVersion: v3
   releaseName: fluxcd
   chart:
-    repository: https://charts.fluxcd.io
-    chart: flux
+    git: https://github.com/fluxcd/flux.git
+    path: charts/flux
+    ref: master
   valuesFrom:
   - configMapKeyRef:
       name: fluxcd-properties
