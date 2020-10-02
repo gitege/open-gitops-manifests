@@ -12,7 +12,6 @@ spec:
   chart:
     repository: https://charts.fluxcd.io
     chart: flux
-  values:
   valuesFrom:
   - configMapKeyRef:
       name: fluxcd-properties
