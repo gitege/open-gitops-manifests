@@ -7,12 +7,10 @@ metadata:
   annotations:
     fluxcd.io/automated: "true"
 spec:
-  helmVersion: v3
   releaseName: fluxcd
   chart:
-    git: https://github.com/fluxcd/flux.git
-    path: charts/flux
-    ref: master
+    repository: charts.fluxcd.io
+    chart: flux
   valuesFrom:
   - configMapKeyRef:
       name: fluxcd-properties
