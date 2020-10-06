@@ -10,9 +10,9 @@ spec:
   helmVersion: v3
   releaseName: ingress-nginx
   chart:
-    repo: https://kubernetes.github.io/ingress-nginx
-    path: ingress-nginx
-    version: 3.4.0
+    repository: https://kubernetes.github.io/ingress-nginx
+    name: ingress-nginx
+    # version: 3.4.0
   valuesFrom:
   - configMapKeyRef:
       name: ingress-nginx-properties
