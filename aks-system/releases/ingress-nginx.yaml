@@ -17,6 +17,9 @@ spec:
     controller:
       config:
         client_body_timeout: 3600s
+      extraArgs:
+        enable-ssl-passthrough: true
+
   # valuesFrom:
   # - configMapKeyRef:
   #     name: ingress-nginx-properties
