@@ -12,7 +12,7 @@ spec:
   chart:
     git: https://github.com/Azure/aad-pod-identity.git
     path: charts/aad-pod-identity
-    ref: master
+    ref: v1.7.5
   values:
     installCRDs: true
     leaderElection:
